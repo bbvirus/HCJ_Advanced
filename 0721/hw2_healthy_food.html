@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<ul class="food">
+			<li>선식</li>
+			<li>토마토</li>
+			<li>마늘</li>
+		</ul>
+
+		<script>
+			var obj = {
+				strTexts : " 은 정말 몸에 좋아요 ^^ ",
+				registerEvents : function() {
+					document.querySelector(".food").addEventListener('click', function(e) {
+						targetText = e.target.innerText;
+						console.log(targetText + this.strTexts);
+					}.bind(this))
+				}
+			}
+
+			obj.registerEvents();
+		</script>
+	</body>
+</html>
